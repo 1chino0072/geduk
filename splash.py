@@ -7,14 +7,13 @@ import gtk
 import gobject
 
 class Splash:
-    # when invoked (via signal delete_event), terminates the application.
+    
     def close_application(self, widget, event, data=None):
         gtk.main_quit()
         return gtk.FALSE
 
     def __init__(self):
-        # create the main window, and attach delete_event signal to terminating
-        # the application
+        
         self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
         self.window.set_position(gtk.WIN_POS_CENTER_ALWAYS)
         self.window.connect("delete_event", self.close_application)
@@ -22,7 +21,6 @@ class Splash:
         self.window.set_icon_from_file("icono.ico")
         self.window.set_decorated(True)
 
-        # a vertical box
         vbox = gtk.VBox()
         vbox.show()
         self.window.add(vbox)

@@ -18,7 +18,7 @@ class Splash:
         self.window.set_position(gtk.WIN_POS_CENTER_ALWAYS)
         self.window.connect("delete_event", self.close_application)
         self.window.set_title("Bienvenido")
-        self.window.set_icon_from_file("icono.ico")
+        self.window.set_icon_from_file("images/icono.ico")
         self.window.set_decorated(True)
 
         vbox = gtk.VBox()
@@ -26,7 +26,7 @@ class Splash:
         self.window.add(vbox)
 
         image = gtk.Image()
-        image.set_from_file("splash.png")
+        image.set_from_file("images/splash.png")
         image.show()
         vbox.pack_start(image)
 
